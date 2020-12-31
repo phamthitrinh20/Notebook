@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Notes App</title>
+  
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="./noteapp.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- delete note modal  -->
+    <div class="modal fade" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="mi-modal">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content mg-top">
+            <div class="modal-footer">
+                <h4 class="modal-title" id="myModalLabel">Are you sure you want to delete it?</h4>
+                <button type="button" class="btn btn-default" id="modal-btn-yes">Yes</button>
+                <button type="button" class="btn btn-primary" id="modal-btn-no">No</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- delete all note modal  -->
+    <div class="modal fade" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="deleteAll-modal">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content mg-top">
+            <div class="modal-footer">
+                <h4 class="modal-title" id="myModalLabel">Do you want to delete all notes?</h4>
+                <button type="button" class="btn btn-default" id="modal-btn-yes-all">Yes</button>
+                <button type="button" class="btn btn-primary" id="modal-btn-no-all">No</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Update Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Note</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="card-body ">
+                        <div class="form-group ">
+                            <h5 class="card-title">Title</h5>
+                            <input name="title" type="text" class="form-control border border-success" id="addTitle"
+                                aria-describedby="title" placeholder="Enter title" required="true">
+                            <p style="color: red; font-weight: bold;font-size: 1rem;" id="title"></p>
+                        </div>
+                        <div class="form-group">
+                            <h5 class="card-title">Content</h5>
+                            <textarea name="content" class="form-control" id="addTxt" rows="3"
+                                placeholder="Enter content" required="true"></textarea>
+                            <p style="color: red; font-weight: bold;font-size: 1rem;" id="content"></p>
+                        </div>
+                        <button class="btn btn-primary" id="addBtn">Save</button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-3" style="width: 860px;">
+        <div class="top">
+            <a id="add_btn" role="button" data-toggle="modal" data-target="#myModal"><i
+                    class="fa fa-plus-circle fa-2x "></i></a>
+            <h1>Note App 2020</h1>
+            <div id="search">
+                <input type="search" id="searchTxt" name="text" placeholder="Search Notes...">
+            </div>
+        </div>
+
+        <div class="main">
+            <h2>List Notes</h2>
+            <button class="btn btn-primary" id="clear">Delete All</button>
+            <div id="notes" class="row container-fluid" style="cursor: pointer;"> </div>
+        </div>
+    </div>
+
+    <link rel="stylesheet" type="text/css" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/110131/githubmd.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="./appnote.js"></script>
+</body>
+</html>

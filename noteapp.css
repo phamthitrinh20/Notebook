@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+}
+
+body,html{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #EEEEEE !important;
+}
+
+.top{
+    box-shadow: 5px 10px 10px 0 rgba(18, 108, 192, 0.28);
+    background: #7FFFD4;
+    height: 150px;
+   
+}
+
+.container {
+    top:25px;
+    padding:10px;
+    position:relative;
+}
+
+.main{
+    box-shadow: 0 8px 6px 0 rgba(18, 108, 192, 0.28);
+    background: #F0F8FF;
+}
+
+#clear{
+    position: relative;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    margin-left: 50px;
+}
+
+h2{
+    font-size: 25px;
+    position: relative;
+    top: 25px;
+    left: 50px;    
+}
+
+h1{
+    text-align: center;
+}
+
+#add_btn{
+  float: right;
+  font-size: 22px;
+}
+
+#search{
+    margin-bottom: 10px;
+}
+
+#search input{
+    color: black;
+    width: 550px;
+    height: 45px;
+    font-size: 20px;
+    border-radius: 25px;
+    outline: none;
+    border-color: rgb(23, 23, 24);
+    position: relative;
+    left: 120px;
+    padding-left: 35px;
+    margin-top: 17px;
+}
+
+#search input:hover{
+    box-shadow: 0 1px 6px 0 rgba(26, 61, 175, 0.28);  
+}
+
+.fa:hover {
+    color: rgb(255, 51, 0);
+}
+
+.fa-plus-circle{
+    color: rgb(40, 21, 209);
+    margin-right: 18px;
+    margin-top: 7px;
+}
+
+.form-inline {
+    align-items: unset !important;
+}
+
+.mg-top {
+    margin-top: 240px;
+}
